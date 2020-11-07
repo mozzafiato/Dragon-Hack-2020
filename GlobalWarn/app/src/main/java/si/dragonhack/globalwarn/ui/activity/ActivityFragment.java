@@ -12,6 +12,10 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.google.firebase.Timestamp;
+
+import java.util.Date;
+
 import si.dragonhack.globalwarn.R;
 
 public class ActivityFragment extends Fragment {
@@ -30,6 +34,12 @@ public class ActivityFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+        Date start_date = new Date();
+        start_date.setTime(1604746800000L);
+        Date end_date = new Date();
+
+        activityViewModel.insertActivityData("test_user0", "walking", new Timestamp(start_date), new Timestamp(end_date));
         return root;
     }
 }

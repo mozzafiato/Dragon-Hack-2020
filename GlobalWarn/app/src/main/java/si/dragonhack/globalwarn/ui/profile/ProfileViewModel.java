@@ -19,12 +19,11 @@ public class ProfileViewModel extends ViewModel {
     private MutableLiveData<String> mText;
 
     private FirebaseFirestore db;
-    private String fireBaseData;
 
-    private static final String USERNAME_FIELD = "username";
-    private static final String ACTIVITY_TYPE_FIELD = "activity";
-    private static final String START_TIMESTAMP_FIELD = "start_timestamp";
-    private static final String END_TIMESTAMP_FIELD = "end_timestamp";
+    public static final String USERNAME_FIELD = "username";
+    public static final String ACTIVITY_TYPE_FIELD = "activity";
+    public static final String START_TIMESTAMP_FIELD = "start_timestamp";
+    public static final String END_TIMESTAMP_FIELD = "end_timestamp";
 
     public ProfileViewModel() {
         mText = new MutableLiveData<>();
@@ -48,12 +47,12 @@ public class ProfileViewModel extends ViewModel {
                         StringBuilder stringBuilder = new StringBuilder();
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.d("ProfileFragment", document.getId() + " => " + document.getData());
+                                Log.d("Profile", document.getId() + " => " + document.getData());
                                 stringBuilder.append(buildString(document) + "\n");
                             }
                             mText.setValue(stringBuilder.toString());
                         } else {
-                            Log.w("ProfileFragment", "Error getting documents.", task.getException());
+                            Log.w("Profile", "Error getting documents.", task.getException());
                         }
                     }
                 });
