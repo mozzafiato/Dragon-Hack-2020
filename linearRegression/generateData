@@ -1,0 +1,18 @@
+import pandas as pd
+import random
+
+df = pd.read_csv("data.csv")
+print(df.head())
+
+for i in range(0,29):
+    n = random.randint(0,7)
+    h = random.randint(0,23)
+    c = random.randint(0, 126) * 0.1
+    print(n)
+    df.iat[i,n] = 1
+    df.iat[i,h+7] = 1
+    df.iat[i,31] = c
+print(df.head())
+df.to_csv(r'generatedData.csv')
+
+
