@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "350218042479",
+    "firebase_url": "https://dragonhack-2020.firebaseio.com",
+    "project_id": "dragonhack-2020",
+    "storage_bucket": "dragonhack-2020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350218042479:android:f06d72c1f3b65cca3f219a",
+        "android_client_info": {
+          "package_name": "si.dragonhack.globalwarn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350218042479-kr1l3ij1ioe3gr27g3bvlra7q43cuv07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAELeps6hx7VwelUYqg0oivaHua5g1Di58"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350218042479-kr1l3ij1ioe3gr27g3bvlra7q43cuv07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

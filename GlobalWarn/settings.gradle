@@ -1,0 +1,2 @@
+rootProject.name='Global Warn'
+include ':app'
