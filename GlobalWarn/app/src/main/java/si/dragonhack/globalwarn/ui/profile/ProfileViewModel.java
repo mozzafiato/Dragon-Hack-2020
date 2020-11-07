@@ -59,6 +59,10 @@ public class ProfileViewModel extends ViewModel {
                 });
     }
 
+
+    /**
+        Funkcija služi samo izpisovanju podatkov v Fragment in je zato zelo spaghetti style
+     **/
     private String buildString(QueryDocumentSnapshot document) {
         StringBuilder line = new StringBuilder();
         line.append(document.get(USERNAME_FIELD));
