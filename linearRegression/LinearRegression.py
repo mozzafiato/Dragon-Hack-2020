@@ -28,13 +28,17 @@ for i in range(0, 7):
     list[7] = 1
     prediction.append(reg.predict([list])[0])
 
-np.savetxt("predictedData.csv", prediction, delimiter=",", fmt='%s')
+json_prediction={
+    u"monday": prediction[0],
+    u"tuesday": prediction[1],
+    u"wednesday": prediction[2],
+    u"thursday": prediction[3],
+    u"friday": prediction[4],
+    u"saturday": prediction[5],
+    u"sunday": prediction[6]
+}
 
 # example to save
-# doc_ref = db.collection(u'prediction').document(u'data-points')
-# doc_ref.setdoc_ref.set({
-#     u'first': u'Alan',
-#     u'middle': u'Mathison',
-#     u'last': u'Turing',
-#     u'born': 1912
-# })
+doc_ref = db.collection(u'prediction').document(u'data-points')
+doc_ref.set(json_prediction)
+

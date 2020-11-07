@@ -1,0 +1,4 @@
+firebase_admin
+pandas==1.1.3
+sklearn
+numpy
